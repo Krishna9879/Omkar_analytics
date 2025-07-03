@@ -82,7 +82,7 @@ const Header = () => {
               { 
                 id: 'services', 
                 label: 'Services', 
-                path: '/services',
+                path: '/equity',
                 dropdown: [
                   { id: 'equity', label: 'Equity', path: '/equity' },
                   { id: 'index-options', label: 'Index Options', path: '/index-options' },
@@ -177,7 +177,7 @@ const Header = () => {
                 { 
                   id: 'services', 
                   label: 'Services', 
-                  path: '/services',
+                  path: 'services',
                   dropdown: [
                     { id: 'equity', label: 'Equity', path: '/equity' },
                     { id: 'index-options', label: 'Index Options', path: '/index-options' },
