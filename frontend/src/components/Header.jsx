@@ -43,8 +43,9 @@ const Header = () => {
   const isResearchPage = window.location.pathname === '/research-dashboard';
   const isEquityPage = window.location.pathname === '/equity';
   const isIndexOptionsPage = window.location.pathname === '/index-options';
+  const isAboutUsPage = window.location.pathname === '/aboutus';
   
-  const isSpecialPage = isResearchPage || isEquityPage || isIndexOptionsPage;
+  const isSpecialPage = isResearchPage || isEquityPage || isIndexOptionsPage || isAboutUsPage;
   const headerBg = isScrolled || isSpecialPage ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent';
   const textColor = isScrolled || isSpecialPage ? 'text-gray-700' : 'text-white';
 
@@ -70,7 +71,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             {[
               { id: 'home', label: 'Home', action: () => scrollToSection('home') },
-              { id: 'about', label: 'About', action: () => scrollToSection('about') },
+              { id: 'about', label: 'About', action: () => navigate('/aboutus') },
               { 
                 id: 'services', 
                 label: 'Services',
@@ -170,7 +171,7 @@ const Header = () => {
             <nav className="flex flex-col space-y-3 pt-4">
               {[
                 { id: 'home', label: 'Home', action: () => scrollToSection('home') },
-                { id: 'about', label: 'About', action: () => scrollToSection('about') },
+                { id: 'about', label: 'About', action: () => navigate('/aboutus') },
                 { 
                   id: 'services', 
                   label: 'Services',

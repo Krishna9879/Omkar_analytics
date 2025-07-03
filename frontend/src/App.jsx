@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Equity from './pages/Equity';
 import IndexOptions from './pages/IndexOptions';
 import ResearchDashboard from './pages/ResearchPage';
+import AboutUs from './pages/AboutUs';
 
 // Scroll to section handler
 const ScrollHandler = () => {
@@ -47,6 +48,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/equity" element={<Equity />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/index-options" element={<IndexOptions />} />
           <Route path="/research-dashboard" element={<ResearchDashboard />} />
         </Routes>
