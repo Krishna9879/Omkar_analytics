@@ -6,18 +6,34 @@ import Services from './components/Services';
 import Research from './components/Research';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Equity from './pages/Equity';
+import IndexOptions from './pages/IndexOptions';
+
+// Home page component
+const HomePage = () => (
+  <>
+    <Hero />
+    <About />
+    <Services />
+    <Research />
+    <Contact />
+    <Footer />
+  </>
+);
 
 function App() {
   return (
-    <div className="min-h-screen">
-      <Header />
-      <Hero />
-      <About />
-      <Services />
-      <Research />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/equity" element={<Equity />} />
+          <Route path="/index-options" element={<IndexOptions />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
